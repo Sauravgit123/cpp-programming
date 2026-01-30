@@ -45,12 +45,15 @@ int main()
     for (int i = 1; i <= 2 * n - 1; i++)
     {
 
-        int space = i == (n / 2) + 1 ? for (int k = 1; k <= space; k++)
+        int space = i <= n ? n - i : i - n;
+        int stars = i <= n ? i : (2 * n - i);
+        for (int k = 1; k <= space; k++)
+
         {
             cout << " ";
         }
 
-        for (int j = 1; j <= i; j++)
+        for (int j = 1; j <= stars; j++)
         {
             cout << "*" << " ";
         }
