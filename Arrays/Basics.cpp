@@ -17,16 +17,23 @@ int main()
         cout << arr[i] << " ";
     }
     arr[1] = 4; // UPDATION
-    cout << endl;
+    cout << endl
+         << "Updated: ";
     for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl
+         << "Reverse : ";
+    for (int i = n - 1; i >= 0; i--)
     {
         cout << arr[i] << " ";
     }
 
     // 2ND METHOD TO INITIALISE ARRAYS
     cout << endl;
-    float arr2[4] = {2.89, 3, 4, 5};
-    for (int i = 0; i < 3; i++)
+    float arr2[] = {2.89, 3, 4, 5}; // Declaration and Initialisation
+    for (int i = 0; i < 4; i++)
     {
         cout << arr2[i] << " ";
     }
