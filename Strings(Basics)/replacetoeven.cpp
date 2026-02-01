@@ -14,7 +14,8 @@ int main()
             s[i] = 'a';
     }
     cout << endl
-         << "TNEW STRING  : " << s;
+         << "TNEW STRING  : " << s << endl
+         << sizeof(s);
 
     return 0;
 }
