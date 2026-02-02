@@ -38,5 +38,7 @@ int main()
         cout << arr2[i] << " ";
     }
 
+    int size = 10, b[size]; // WONT GIVE ERROR CREATES A VARIABLE SIZE=10 AND ARRAY WHOSE SIZE IS 10
+    int b[size], size = 10; // GIVE ERROR AS SIZE NOT DECLARED before declaring the array size
     return 0;
 }
