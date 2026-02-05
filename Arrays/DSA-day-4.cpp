@@ -27,6 +27,29 @@ void sort(vector<int> &v)
    }
 }
 
+void double_pointer(vector<int> &v)
+{
+
+   int l = 0, r = v.size() - 1;
+
+   while (l < r)
+   {
+      if (v[l] == 1 && v[r] == 0)
+      {
+         v[l++] = 0;
+         v[r--] = 1;
+      }
+      if (v[l] == 0)
+      {
+         l++;
+      }
+      if (v[r] == 1)
+      {
+         r--;
+      }
+   }
+}
+
 int main()
 {
    int n;
@@ -40,7 +63,8 @@ int main()
       cin >> e;
       v.push_back(e);
    }
-   sort(v);
+   // sort(v);   // NORMAL METHOD
+   double_pointer(v); // USING DOUBLE POINTER
    for (int i = 0; i < n; i++)
    {
       cout << v[i];
