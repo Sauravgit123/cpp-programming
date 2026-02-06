@@ -1,9 +1,10 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main()
 {
-    // PREFIX SUM - RETURN THE RUNNING SUM OF THE GIVEN ARRAY
+    // Q-1 PREFIX SUM - RETURN THE RUNNING SUM OF THE GIVEN ARRAY
 
     // int n;
     // cout << "Enter the no. of elements in array : ";
@@ -32,47 +33,85 @@ int main()
     //     cout << arr[i] << " ";
     // }
 
-    // divide the arra yinto 2 where 2 subarrays sum is equal to each other
+    // Q -2 divide the arra yinto 2 where 2 subarrays sum is equal to each other
     // prefix sum == suffix sum
 
+    // int n;
+    // cout << "Enter the no. of elements in array : ";
+    // cin >> n;
+    // int arr[n];
+    // cout << "Enter the elements : ";
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cin >> arr[i];
+    // }
+    // cout << endl
+    //      << "Given array : ";
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cout << arr[i] << " ";
+    // }
+    // int tsum = 0;
+    // for (int i = 0; i < n; i++)
+    // {
+    //     tsum += arr[i];
+    // }
+    // int psum = 0;
+    // int f = 0;
+    // for (int i = 0; i < n; i++)
+    // {
+    //     psum += arr[i];
+    //     int s_sum = tsum - psum;
+    //     if (s_sum == psum)
+    //     {
+    //         cout << endl
+    //              << "True";
+    //         f = 1;
+    //         break;
+    //     }
+    // }
+    // if (f == 0)
+    // {
+    //     cout << endl
+    //          << "Not found";
+    // }
+
+    // Q-3 RETURN THE SUM FOR THE QUERIES OF RANGE L-R  FROM THE ARRAY
+
     int n;
-    cout << "Enter the no. of elements in array : ";
+    cout << "Enter the no. of elements in vector : ";
     cin >> n;
-    int arr[n];
-    cout << "Enter the elements : ";
-    for (int i = 0; i < n; i++)
+
+    vector<int> v(n + 1);
+
+    for (int i = 1; i < n + 1; i++)
     {
-        cin >> arr[i];
+        cin >> v[i];
     }
     cout << endl
          << "Given array : ";
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i < n + 1; i++)
     {
-        cout << arr[i] << " ";
+        cout << v[i] << " ";
     }
-    int tsum = 0;
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i < n + 1; i++)
     {
-        tsum += arr[i];
+        v[i] += v[i - 1];
     }
-    int psum = 0;
-    int f = 0;
-    for (int i = 0; i < n; i++)
+
+    int q;
+    cout << endl
+         << "Enter the no. of queries :";
+    cin >> q;
+    int ans = 0;
+    while (q > 0)
     {
-        psum += arr[i];
-        int s_sum = tsum - psum;
-        if (s_sum == psum)
-        {
-            cout << endl
-                 << "True";
-            f = 1;
-            break;
-        }
-    }
-    if (f == 0)
-    {
-        cout << endl
-             << "Not found";
+        int l, r;
+        cin >> l >> r;
+
+        ans = v[r] - v[l - 1];
+        cout << ans << endl; // as l and r are included
+        q--;
     }
 
     return 0;
