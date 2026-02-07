@@ -101,7 +101,7 @@ int main()
 
     int q;
     cout << endl
-         << "Enter the no. of queries :";
+         << "Enter the no. of queries :"; // Enter the no. of queries
     cin >> q;
     int ans = 0;
     while (q > 0)
