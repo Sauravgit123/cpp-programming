@@ -58,7 +58,7 @@ int main()
     }
 
     cout << endl
-         << "Output array : ";
+         << "Output array : "; // output
     for (int i = 0; i < m + n; i++)
     {
         cout << arr[i] << " ";
