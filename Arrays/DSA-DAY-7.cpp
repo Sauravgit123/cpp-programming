@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    // There is a array of size n sorted in inc order ,find the pair of elements in the array whose sum =x
+    // Q-1 There is a array of size n sorted in inc order ,find the pair of elements in the array whose sum =x
 
     // int arr[5] = {-1, 0, 1, 2, 3};
     // cout << "Given array :";
@@ -37,7 +37,7 @@ int main()
     //     cout << "No";
     // }
 
-    // NOW BY 2 POINTER APPROCH;
+    // Q-1 NOW BY 2 POINTER APPROCH;
 
     int arr[5] = {-1, 0, 1, 2, 3};
     cout << "Given array :";
@@ -49,8 +49,12 @@ int main()
     int x;
     cout << endl
          << "Enter the target sum x :";
-    cin >> x;
 
+    if (!(cin >> x))
+    {
+        cout << "Error: Please enter a valid number!" << endl;
+        return 1; // Program yahan band ho jayega
+    }
     int i = 0;     // Left pointer (start)
     int j = 5 - 1; // Right pointer (end)
     int f = -1;
@@ -79,6 +83,8 @@ int main()
     {
         cout << "No";
     }
+
+    // Q-3
 
     return 0;
 }
