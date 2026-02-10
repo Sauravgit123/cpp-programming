@@ -88,7 +88,7 @@ int main()
 
     int arr[5] = {-1, 0, 1, 2, 3};
     cout << "Given array :";
-
+    int n = 5;
     for (int i = 0; i < 5; i++)
     {
         cout << arr[i] << " ";
@@ -101,6 +101,41 @@ int main()
     {
         cout << "Error: Please enter a valid number!" << endl;
         return 1; // Program yahan band ho jayega
+    }
+
+    int i = 0;
+    int j = 1;
+    int f = -1; // Flag to track if we found a pair
+
+    while (i < n && j < n)
+    {
+        int diff = arr[j] - arr[i];
+
+        if (diff == x && i != j)
+        {
+            cout << "Pair found: (" << arr[i] << ", " << arr[j] << ")" << endl;
+            f = 1; // Update flag
+            break; // Stop after finding the first pair
+        }
+        else if (diff < x)
+        {
+            j++; // Increase j to make the difference bigger
+        }
+        else
+        {
+            i++; // Increase i to make the difference smaller
+        }
+
+        // Safety: Ensure j is always ahead of i
+        if (i == j)
+        {
+            j++;
+        }
+    }
+
+    if (f == -1)
+    {
+        cout << "No such pair exists." << endl;
     }
 
     return 0;
