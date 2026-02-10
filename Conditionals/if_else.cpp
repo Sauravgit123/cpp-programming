@@ -17,7 +17,7 @@ int main()
     // ODD OR EVEN
 
     int y;
-    cout << "Enter the no :";
+    cout << "Enter the no : ";
     cin >> y;
     if (y % 2 == 0)
         cout << "Even";

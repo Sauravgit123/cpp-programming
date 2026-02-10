@@ -24,12 +24,12 @@ int main()
     cout << a << endl;
 
     int x = 45354;
-    string s = to_string(x); //
+    string s = to_string(x); // int to string
     s = s + "ok";
     cout << s << endl;
     ;
 
-    string w = "2345";
+    string w = "2345";  // string to int
     int c = stoi(w);
     cout << c + 1;
     return 0;

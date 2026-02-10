@@ -23,7 +23,7 @@ int main()
     for (int i = 1; i < n; i++)
 
     {
-        if (arr[i] > max)
+        if (arr[i] > max)            //mx=max(mx,arr[i])   we can use this also
 
             max = arr[i];
     }
@@ -31,7 +31,7 @@ int main()
     for (int i = 1; i < n; i++)
 
     {
-        if (arr[i] < min)
+        if (arr[i] < min)            //mn=min(mn,arr[i])   we can use this also
 
             min = arr[i];
     }

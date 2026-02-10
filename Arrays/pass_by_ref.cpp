@@ -3,7 +3,7 @@ using namespace std;
 
 void change(int brr[])
 {
-    brr[2] = 11;
+    brr[2] = 11;  // array name is diff still we have updated the org array
 }
 int main()
 {

@@ -21,7 +21,11 @@ void greet2();
 //     greet2();
 //     return 0;
 
-// MULTIPLE FUNCTIONS
+
+
+
+
+// MULTIPLE FUNCTIONS  (similar to nested loops)
 
 void greet()
 {

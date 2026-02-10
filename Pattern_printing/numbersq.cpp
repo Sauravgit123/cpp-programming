@@ -10,10 +10,12 @@ int main()
     {
         for (int j = 1; j <= n; j++)
         {
-            cout << j << " ";
+            cout << j << " ";        // if i then pattern would be 1111->2222.....
         }
         cout << endl;
     }
+
+
 
     return 0;
 }

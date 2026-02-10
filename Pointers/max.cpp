@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-maximum(int x, int y)
+int maximum(int x, int y)   // CUSTOM FUNCTION ...IT CAN BE DONE VIA max() func easily
 {
 
     if (x > y)

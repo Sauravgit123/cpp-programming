@@ -7,7 +7,7 @@ int main()
 
     // odd even
     int x;
-    cout << "Enter the no ";
+    cout << "Enter the no : ";
     cin >> x;
 
     (x % 2 == 0) ? cout << "Even" : cout << "Odd";

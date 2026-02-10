@@ -18,6 +18,14 @@ int main()
     // else
     //     cout << count << endl;
 
+
+
+
+
+
+
+
+    
     // Q-2 (WAP FOR PRINTING THE SUM OF A DIGITS OF A NUMBER)
 
     // int a, sum = 0;
@@ -32,6 +40,14 @@ int main()
     // }
     // cout << sum;
 
+
+
+
+
+
+
+
+
     // Q-3 (SIMILARLY  PRODUCT OF DIGITS IN A NUMBER  assuming NO 0 in no. )
 
     // int b, p = 1;
@@ -45,6 +61,14 @@ int main()
     //     b /= 10;
     // }
     // cout << p;
+
+
+
+
+
+
+
+
 
     // Q-4 (WAP TO WRITE THE REVERSE OF A GIVEN NO.)
 
@@ -62,6 +86,14 @@ int main()
     // cout << "Reverse of the number is : " << rev << endl;
     // cout << "SUM OF NO. AND ITS REVERSE : " << temp2 + rev;
 
+
+
+
+
+
+
+
+
     // Q-5 (FACTORIAL OF GIVEN NUMBER)
 
     // int n1;
@@ -76,6 +108,10 @@ int main()
     // }
     // cout << "Factorial of the given no. : " << fact << endl;
 
+
+
+
+
     // via for loop
 
     // int n1;
@@ -88,6 +124,13 @@ int main()
     // }
     // cout << "Factorial is : " << fact << endl;
 
+
+
+
+
+
+
+
     // Q-6 (SUM 1 - N)
 
     // int n, sum = 0;
@@ -99,6 +142,10 @@ int main()
     //     sum += i;
     // }
     // cout << "Sum : " << sum << endl;
+
+
+
+
 
     // or via while loop
 
@@ -113,6 +160,12 @@ int main()
     // }
 
     // cout << "Sum : " << sum << endl;
+
+
+
+
+
+
 
     // Q-7 (ASCAII VALUES FROM A-Z)
 

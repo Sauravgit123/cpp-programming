@@ -5,8 +5,8 @@ void pr(int n)
 {
     if (n == 0) // BASE CASE
         return;
-    pr(n - 1);
-    cout << n << endl;
+    pr(n - 1);  //CALL
+    cout << n << endl;  // WORK
 }
 int main()
 {

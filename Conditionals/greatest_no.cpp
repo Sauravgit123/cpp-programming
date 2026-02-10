@@ -11,7 +11,7 @@ int main()
     cout << "Enter 3rd no : ";
     cin >> c;
     if (a > b && a > c)
-        cout << a << " is greatest" << endl;
+        cout << a << " is greatest" << endl;              
     else if (b > a && b > c)
         cout << b << " is greatest " << endl;
     else

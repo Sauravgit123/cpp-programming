@@ -12,7 +12,7 @@ int main()
 
     cout << endl;
     // WHILE LOOP IS SIMILAR TO FOR LOOP ONLY
-    int q = 21;
+    int q = 1;
     for (; q <= 10;)
     {
         cout << q << " ";

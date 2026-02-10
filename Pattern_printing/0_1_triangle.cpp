@@ -11,8 +11,8 @@ int main()
     {
         for (int j = 1; j <= i; j++)
         {
-            if ((i + j) % 2 == 0)
-                cout << 1 << " ";
+            if ((i + j) % 2 == 0)                 // important as we need to notice the pattern (out of the box) 
+                cout << 1 << " ";                 // as in (i+j) position value is 1 otherwisw 0 
             else
                 cout << 0 << " ";
         }

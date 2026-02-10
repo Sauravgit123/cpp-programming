@@ -7,7 +7,7 @@ void pr(int n, int x)
         return;
 
     cout << x << endl;
-    pr(n, x + 1); // if taking 2 parameters...it must contain 2 only ...
+    pr(n, x + 1); // if taking 2 parameters...it must contain 2 arguments only ...
 }
 
 int main()

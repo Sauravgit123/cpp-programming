@@ -15,13 +15,22 @@ int main()
 
     // USING MATHS
 
-    int x = 5;
-    int y = 2;
-    cout << x << " " << y << endl;
-    x = x + y;
-    y = x - y;
-    x = x - y;
-    cout << x << " " << y;
+    // int x = 5;
+    // int y = 2;
+    // cout << x << " " << y << endl;
+    // x = x + y;
+    // y = x - y;
+    // x = x - y;
+    // cout << x << " " << y;
+
+
+
+
+
+
+
+
+
 
     return 0;
 }

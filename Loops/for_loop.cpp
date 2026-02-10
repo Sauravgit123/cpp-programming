@@ -11,12 +11,13 @@ int main()
         cout << i << " ";
     }
 
+
     // taking input then printing
     int x;
     cout << endl
          << " enter the no. to be print : ";
     cin >> x;
-    for (int i = 1; i <= x; ++i)
+    for (int i = 1; i <= x; i++ )    // condition  --> work  --->  increment/decrement
     {
         cout << i << " ";
     }

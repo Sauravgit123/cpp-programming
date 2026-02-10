@@ -44,7 +44,7 @@ void double_pointer(vector<int> &v)
          l++;
       }
       if (v[r] == 1)
-      {
+      {  
          r--;
       }
    }
@@ -70,5 +70,15 @@ int main()
       cout << v[i];
    }
 
+
+
+
+
+
+
+
+
+
+   
    return 0;
 }

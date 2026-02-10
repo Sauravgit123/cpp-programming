@@ -41,8 +41,8 @@ int main()
         j++;
     }
     cout << endl;
-    v1.insert(v1.begin() + 1, 55);
-    v1.erase(v1.end() - 1);
+    v1.insert(v1.begin() + 1, 55);  // insert at 1 index
+    v1.erase(v1.end() - 1);          // remove the last element
     int k = 0;
     while (k < v1.size())
     {

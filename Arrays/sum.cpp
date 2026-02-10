@@ -13,12 +13,12 @@ int main()
         cin >> arr[i];
     }
     cout << endl
-         << "GIVEN ARRAY : ";
-    for (int i = 0; i < n; i++)
+         << "GIVEN ARRAY : ";             // 1 int element takes 4 byte
+    for (int i = 0; i < n; i++)       //sizeof(arr)/4  --> gives the no. of elements in array  
     {
-        cout << arr[i] << " ";
+        cout << arr[i] << " ";           // sizeof() --> gives the total size it takes elements*4 
     }
-    int sum = 0;
+    int sum = 0;             
     for (int i = 0; i < n; i++)
     {
         sum += arr[i];
