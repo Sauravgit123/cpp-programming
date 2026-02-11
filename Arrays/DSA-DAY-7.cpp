@@ -4,7 +4,8 @@ using namespace std;
 
 int main()
 {
-    // Q-1 There is a array of size n sorted in inc order ,find the pair of elements in the array whose sum =x
+    // Q-1 There is a array of size n sorted in inc order ,
+    // find the pair of elements in the array whose sum =x
 
     // int arr[5] = {-1, 0, 1, 2, 3};
     // cout << "Given array :";
@@ -85,7 +86,8 @@ int main()
     //     cout << "No";
     // }
 
-    // Q-3 Given an array sorted in inc order ...and target diff =x, find the pair from array whose diff is x
+    // Q-2 Given an array sorted in inc order ...and target diff =x,
+    // find the pair from array whose diff is x
 
     // int arr[5] = {-1, 0, 1, 2, 3};
     // cout << "Given array :";
@@ -141,48 +143,91 @@ int main()
 
     // Q-4 GIVEN A VECTOR IN INC SORTED ORDER , RETURN A
     // ARRAY OF SW. OF EACH NO.SORTED IN INC ORDER, WHERE VECTOR SIZE 1-101
-    int n;
-    cout << "Enter the size of vector :";
+    // int n;
+    // cout << "Enter the size of vector :";
+    // cin >> n;
+
+    // vector<int> v;
+    // v.reserve(n); // Allocates memory for n items, but size is still 0
+    // for (int i = 0; i < n; i++)
+    // {
+    //     int e;
+    //     cin >> e;
+    //     v.push_back(e);
+    // }
+    // cout << "Given vector :";
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cout << v[i] << " ";
+    // }
+
+    // int arr[n];
+    // int i = 0, k = n - 1, j = n - 1; // start putting elements from last
+    // // as we are sure bout larger no. not smaller one
+
+    // while (i <= j)
+    // {
+    //     int l = v[i] * v[i], r = v[j] * v[j];
+    //     if (l >= r)
+    //     {
+    //         arr[k--] = l;
+    //         i++;
+    //     }
+    //     else
+    //     {
+    //         arr[k--] = r;
+    //         j--;
+    //     }
+    // }
+    // cout << endl
+    //      << "Output array :";
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cout << arr[i] << " ";
+    // }
+
+    // Q-5 Given an array in sorted order ,given int x , find the no. of pairs
+    // where sum=x
+
+    int n, x, c = 0;
+    cout << "Enter the no. of elements for the array :";
     cin >> n;
-
-    vector<int> v;
-    v.reserve(n); // Allocates memory for n items, but size is still 0
-    for (int i = 0; i < n; i++)
-    {
-        int e;
-        cin >> e;
-        v.push_back(e);
-    }
-    cout << "Given vector :";
-    for (int i = 0; i < n; i++)
-    {
-        cout << v[i] << " ";
-    }
-
     int arr[n];
-    int i = 0, k = n - 1, j = n - 1; // start putting elements from last
-    // as we are sure bout larger no. not smaller one
-
-    while (i <= j)
+    cout << "Now enter the elements :" << endl;
+    for (int i = 0; i < n; i++)
     {
-        int l = v[i] * v[i], r = v[j] * v[j];
-        if (l >= r)
-        {
-            arr[k--] = l;
-            i++;
-        }
-        else
-        {
-            arr[k--] = r;
-            j--;
-        }
+        cin >> arr[i];
     }
-    cout << endl
-         << "Output array :";
+    cout << "Given array :";
+
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
     }
+    cout << endl
+         << "Enter the element X : ";
+    cin >> x;
+    int i = 0, j = n - 1;
+    while (i < j)
+    {
+        int sum = arr[i] + arr[j];
+        if (sum == x)
+        {
+            c++;
+            i++, j--;
+        }
+
+        else
+        {
+            if (sum >= x)
+            {
+                j--;
+            }
+            else
+                i++;
+        }
+    }
+    cout << "No. of pairs : " << c;
 
     return 0;
 }
