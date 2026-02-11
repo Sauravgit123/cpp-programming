@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main()
@@ -86,56 +87,101 @@ int main()
 
     // Q-3 Given an array sorted in inc order ...and target diff =x, find the pair from array whose diff is x
 
-    int arr[5] = {-1, 0, 1, 2, 3};
-    cout << "Given array :";
-    int n = 5;
-    for (int i = 0; i < 5; i++)
+    // int arr[5] = {-1, 0, 1, 2, 3};
+    // cout << "Given array :";
+    // int n = 5;
+    // for (int i = 0; i < 5; i++)
+    // {
+    //     cout << arr[i] << " ";
+    // }
+    // int x;
+    // cout << endl
+    //      << "Enter the target diff x :";
+
+    // if (!(cin >> x))
+    // {
+    //     cout << "Error: Please enter a valid number!" << endl;
+    //     return 1; // Program yahan band ho jayega
+    // }
+
+    // int i = 0;
+    // int j = 1;
+    // int f = -1; // Flag to track if we found a pair
+
+    // while (i < n && j < n)
+    // {
+    //     int diff = arr[j] - arr[i];
+
+    //     if (diff == abs(x) && i != j)
+    //     {
+    //         cout << "Pair found: (" << arr[i] << ", " << arr[j] << ")" << endl;
+    //         f = 1; // Update flag
+    //         break; // Stop after finding the first pair
+    //     }
+    //     else if (diff < abs(x))
+    //     {
+    //         j++; // Increase j to make the difference bigger
+    //     }
+    //     else
+    //     {
+    //         i++; // Increase i to make the difference smaller
+    //     }
+
+    //     // Safety: Ensure j is always ahead of i
+    //     if (i == j)
+    //     {
+    //         j++;
+    //     }
+    // }
+
+    // if (f == -1)
+    // {
+    //     cout << "No such pair exists." << endl;
+    // }
+
+    // Q-4 GIVEN A VECTOR IN INC SORTED ORDER , RETURN A
+    // ARRAY OF SW. OF EACH NO.SORTED IN INC ORDER, WHERE VECTOR SIZE 1-101
+    int n;
+    cout << "Enter the size of vector :";
+    cin >> n;
+
+    vector<int> v;
+    v.reserve(n); // Allocates memory for n items, but size is still 0
+    for (int i = 0; i < n; i++)
     {
-        cout << arr[i] << " ";
+        int e;
+        cin >> e;
+        v.push_back(e);
     }
-    int x;
-    cout << endl
-         << "Enter the target diff x :";
-
-    if (!(cin >> x))
+    cout << "Given vector :";
+    for (int i = 0; i < n; i++)
     {
-        cout << "Error: Please enter a valid number!" << endl;
-        return 1; // Program yahan band ho jayega
+        cout << v[i] << " ";
     }
 
-    int i = 0;
-    int j = 1;
-    int f = -1; // Flag to track if we found a pair
+    int arr[n];
+    int i = 0, k = n - 1, j = n - 1; // start putting elements from last
+    // as we are sure bout larger no. not smaller one
 
-    while (i < n && j < n)
+    while (i <= j)
     {
-        int diff = arr[j] - arr[i];
-
-        if (diff == x && i != j)
+        int l = v[i] * v[i], r = v[j] * v[j];
+        if (l >= r)
         {
-            cout << "Pair found: (" << arr[i] << ", " << arr[j] << ")" << endl;
-            f = 1; // Update flag
-            break; // Stop after finding the first pair
-        }
-        else if (diff < x)
-        {
-            j++; // Increase j to make the difference bigger
+            arr[k--] = l;
+            i++;
         }
         else
         {
-            i++; // Increase i to make the difference smaller
-        }
-
-        // Safety: Ensure j is always ahead of i
-        if (i == j)
-        {
-            j++;
+            arr[k--] = r;
+            j--;
         }
     }
-
-    if (f == -1)
+    cout << endl
+         << "Output array :";
+    for (int i = 0; i < n; i++)
     {
-        cout << "No such pair exists." << endl;
+        cout << arr[i] << " ";
     }
 
     return 0;
