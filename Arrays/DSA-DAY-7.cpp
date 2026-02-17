@@ -188,6 +188,8 @@ int main()
 
     // Q-5 Given an array in sorted order ,given int x , find the no. of pairs
     // where sum=x
+    // disjoint pairs (unique pairs) 
+    // each index can be used once
 
     int n, x, c = 0;
     cout << "Enter the no. of elements for the array :";
