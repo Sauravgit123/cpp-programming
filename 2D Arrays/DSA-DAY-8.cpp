@@ -49,7 +49,6 @@ int main()
         }
         cout << endl;
     }
-    int ans[m][n];
 
     return 0;
 }
